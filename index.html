@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beghou Product Newsletter — Issue 1, May 2026</title>
+<!--
+SEND DETAILS — Issue 01
+[Placeholder: confirm before send]
+- Subject (≤40 char) — pick one:
+  • "Inside Product — Issue 01"            (26 ch)
+  • "Arc, made easier in five moves"       (31 ch)
+  • "Five layers of Arc, one issue"        (29 ch)
+- Preheader: "Five efforts making Arc easier to enter, build on, and scale."
+- From:      Patrick Conroy / Product & Technology Innovation
+- Audience:  Beghou all-company (~400)
+- Send window: Tuesday or Wednesday, ~10:00 ET
+-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
@@ -130,7 +142,7 @@ p { margin: 0 0 1.1em; }
 .hero h1 {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(48px, 9vw, 116px);
+  font-size: clamp(48px, 8vw, 96px);
   line-height: 0.96;
   letter-spacing: -0.025em;
   margin: 0 0 28px;
@@ -198,6 +210,11 @@ p { margin: 0 0 1.1em; }
   transition: color .2s, border-color .2s;
 }
 .contents-links a:hover { color: var(--pink); border-bottom-color: var(--pink); }
+.contents-links a:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
 .contents-links .num {
   font-family: var(--mono); font-size: 10px;
   color: var(--pink); font-weight: 600;
@@ -313,8 +330,18 @@ p { margin: 0 0 1.1em; }
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--pink); font-weight: 600;
   padding-top: 3px;
+  max-width: 90px;
 }
 .action-text { font-size: 15.5px; line-height: 1.55; color: var(--text-dark); }
+
+/* Section byline (owner / author) */
+.byline {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 22px 0 0;
+}
 
 /* Resource chips */
 .resources {
@@ -348,6 +375,66 @@ p { margin: 0 0 1.1em; }
 .chip-pink:hover {
   background: var(--navy);
   border-color: var(--navy);
+}
+
+/* =============== SKIP LINK (a11y) =============== */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.skip:focus {
+  left: var(--gutter);
+  top: 8px;
+  z-index: 100;
+  background: var(--pink);
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* =============== LOOKING AHEAD =============== */
+.lookahead {
+  background: var(--lavender-2);
+  padding: clamp(60px, 9vh, 100px) var(--gutter);
+  border-bottom: 1px solid var(--border);
+}
+.lookahead-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.lookahead-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 18px;
+}
+.lookahead-eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--pink);
+}
+.lookahead-text {
+  font-family: var(--display);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.4;
+  color: var(--text-dark);
+  font-weight: 400;
+  max-width: 880px;
+  margin: 0;
+}
+.lookahead-text em {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  text-transform: none;
 }
 
 /* =============== ENGAGE =============== */
@@ -442,12 +529,14 @@ footer {
   max-width: 640px;
 }
 .foot-credits .pinkdot { color: var(--pink); }
+.foot-credits a { text-decoration: underline; text-decoration-color: rgba(230,15,101,0.5); text-underline-offset: 3px; }
+.foot-credits a:hover { color: var(--pink); }
 .foot-meta {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.62);
   text-align: right;
 }
 @media (max-width: 720px) {
@@ -475,6 +564,7 @@ footer {
 </style>
 </head>
 <body>
+<a href="#s1" class="skip">Skip to first section</a>
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -518,7 +608,7 @@ footer {
     <div class="topic-body">
       <span class="topic-tag reveal">The Front Door</span>
       <h2 class="reveal d1">Arc Portal Rollout: <em>what to expect and how to engage</em></h2>
-      <p class="lead reveal d2">Arc Portal is being positioned as the central entry point for Arc experiences, with the current roadmap in Jira showing an MVP in the <strong>May–June window</strong> and follow-on increments for calendar capabilities, alerts and notifications, and third-party integrations later in 2026. The practical ask for the broader company is simple: use the Portal pathway as the starting point for new Arc conversations, and expect more repeatable FAQs, onboarding guidance, and enablement materials as rollout continues. The goal is a simpler, more consistent way for internal teams to explain Arc and guide clients to the right experience.</p>
+      <p class="lead reveal d2">Arc Portal is the central entry point for Arc experiences. The Jira roadmap targets an MVP in the <strong>May–June window</strong>, with follow-on increments later in 2026 for calendar capabilities, alerts and notifications, and third-party integrations. The practical ask for the broader company: use the Portal pathway as the starting point for new Arc conversations, and expect more repeatable FAQs, onboarding guidance, and enablement materials as rollout continues. The goal is a simpler, more consistent way for internal teams to explain Arc and guide clients to the right experience.</p>
 
       <div class="faq reveal d3">
         <div class="faq-title">Portal FAQ</div>
@@ -530,14 +620,16 @@ footer {
       </div>
 
       <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
+        <span class="action-label">Reader Action</span>
         <span class="action-text">Bring new Arc conversations through the Portal pathway and rely on the shared enablement materials rather than building one-off introductions.</span>
       </div>
 
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Portal lead]</p>
+
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/SitePages/CollabHome.aspx">Product Solutions hub <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&tenantId=4854ac27-6418-4983-9efc-93545436d559">P&amp;TI Teams channel <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/SitePages/CollabHome.aspx">Product Solutions hub <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&tenantId=4854ac27-6418-4983-9efc-93545436d559">P&amp;TI Teams channel <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -550,26 +642,28 @@ footer {
     <div class="topic-body">
       <span class="topic-tag reveal">Governed Automation</span>
       <h2 class="reveal d1">Arc Composer: <em>the next layer of governed automation</em></h2>
-      <p class="lead reveal d2">Arc Composer is being built as a governed configuration layer for Arc, starting with incentive compensation scenarios. The current product plan targets an internal <strong>Alpha this summer</strong> and a design-partner <strong>Beta in September 2026</strong>, with broader release planning still in formation. Just as important, the work has moved beyond concept framing into detailed engineering enablers in Jira, including scenario workflows, a shared Composer repository, Postgres setup, Auth0 and Portal Staging integration, Databricks service-principal work, and GitHub alignment. For the broader company, the message is straightforward: position Composer as part of the Arc ecosystem, not as a standalone AI demo.</p>
+      <p class="lead reveal d2">Arc Composer adds a governed configuration layer to Arc, starting with incentive compensation scenarios. The current product plan targets an internal <strong>Alpha in [Placeholder: confirm Alpha month] 2026</strong> and a design-partner <strong>Beta in September 2026</strong>, with broader release planning still in formation. Just as important, the work has moved beyond concept framing into detailed engineering enablers in Jira, including scenario workflows, a shared Composer repository, Postgres setup, Auth0 and Portal Staging integration, Databricks service-principal work, and GitHub alignment. For the broader company, the message is straightforward: position Composer as part of the Arc ecosystem, not as a standalone AI demo.</p>
 
       <div class="faq reveal d3">
         <div class="faq-title">Composer FAQ</div>
         <ul>
           <li>Arc Composer is a governed Arc layer for turning plan intent into configured execution workflows.</li>
-          <li>The current plan points to Alpha this summer and a design-partner Beta in September 2026.</li>
+          <li>The current plan points to Alpha in [Placeholder: confirm Alpha month] 2026 and a design-partner Beta in September 2026.</li>
           <li>It should be positioned as part of the Arc ecosystem, not as a general AI demo.</li>
         </ul>
       </div>
 
       <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
+        <span class="action-label">Reader Action</span>
         <span class="action-text">Use the Composer FAQ before discussing timelines or external positioning, and route readiness questions back to the Composer team.</span>
       </div>
 
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Composer lead]</p>
+
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:w:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Arc%20Composer%20questions.docx?d=wff4648aa38b74283ae51962b8483b219&csf=1&web=1&e=7S6X4P">Arc Composer FAQ <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:p:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Presentations/Composer%20-%20Release%20scope%20for%20board%20v1.pptx?d=wdca6d6aef21c49cd91a42608b736e007&csf=1&web=1&e=IXkfMt">Release-scope deck <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Composer Jira board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:w:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Arc%20Composer%20questions.docx?d=wff4648aa38b74283ae51962b8483b219&csf=1&web=1&e=7S6X4P">Arc Composer FAQ <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:p:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Presentations/Composer%20-%20Release%20scope%20for%20board%20v1.pptx?d=wdca6d6aef21c49cd91a42608b736e007&csf=1&web=1&e=IXkfMt">Release-scope deck <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Composer Jira board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -582,16 +676,18 @@ footer {
     <div class="topic-body">
       <span class="topic-tag reveal">The Visibility Layer</span>
       <h2 class="reveal d1">Roadmap and Jira: <em>making priorities more visible</em></h2>
-      <p class="lead reveal d2">The roadmap is becoming easier to see and easier to discuss because more of the work is now being captured in Jira instead of living only in meetings. Current priorities include <strong>Arc Portal</strong>, the <strong>Arc Composer Beta path</strong>, the <strong>Arc Studio React UI upgrade</strong> with out-of-the-box modules, <strong>Arc DE</strong> operational tooling, and <strong>Alignment migration</strong> into the web experience. That shift gives teams a clearer view of sequencing, dependencies, and what is actively moving now.</p>
+      <p class="lead reveal d2">More of the roadmap now lives in Jira instead of in meetings, which makes it easier to see and easier to discuss. Current priorities include <strong>Arc Portal</strong>, the <strong>Arc Composer Beta path</strong>, the <strong>Arc Studio React UI upgrade</strong> with out-of-the-box modules, <strong>Arc DE</strong> operational tooling, and <strong>Alignment migration</strong> into the web experience. That shift gives teams a clearer view of sequencing, dependencies, and what is actively moving now.</p>
 
       <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
-        <span class="action-text">Use the roadmap board and Jira discussions to understand active priorities and where work is headed next.</span>
+        <span class="action-label">Reader Action</span>
+        <span class="action-text">Open the roadmap board this week, find the one item that overlaps your work, and flag it in the P&amp;TI channel.</span>
       </div>
 
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Roadmap lead]</p>
+
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Arc Composer Jira board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Arc Composer Jira board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -603,17 +699,20 @@ footer {
     <div class="topic-num reveal">04<small>Intake</small></div>
     <div class="topic-body">
       <span class="topic-tag reveal">Pathway for New Ideas</span>
-      <h2 class="reveal d1">A better intake path <em>for ideas and change requests</em></h2>
-      <p class="lead reveal d2">The intake form is becoming the shared pathway for product ideas, module requests, and change requests. The most important change is not a headline number. It is that more requests can now enter the <strong>same review rhythm</strong>, which makes them easier to compare, prioritize, and shape consistently. Because the connected list source was not accessible from this environment, this issue avoids publishing an unverified submission count and keeps the message focused on the improved path itself.</p>
+      <h2 class="reveal d1">Intake: <em>one path, one review rhythm</em></h2>
+      <!-- [Placeholder: confirm intake submission count for Q2 2026 once connected list source is available] -->
+      <p class="lead reveal d2">The intake form is the shared pathway for product ideas, module requests, and change requests. The most important change is not a headline number. It is that more requests now enter the <strong>same review rhythm</strong>, which makes them easier to compare, prioritize, and shape consistently.</p>
 
       <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
+        <span class="action-label">Reader Action</span>
         <span class="action-text">Submit product ideas and change requests through the intake form so they can be reviewed in the same operating rhythm.</span>
       </div>
 
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Intake lead]</p>
+
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I">Product intake form <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I">Product intake form <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -626,19 +725,29 @@ footer {
     <div class="topic-body">
       <span class="topic-tag reveal">Shared Experience Layer</span>
       <h2 class="reveal d1">Design System Rollout: <em>one shared experience layer</em></h2>
-      <p class="lead reveal d2">The design system rollout is about <strong>consistency, speed, and clearer guardrails</strong>. Product discussions this month reinforced that the system should first support Arc Studio configuration work, internal product builds, and client-facing prototypes, with controlled adoption rather than an open-ended custom-app promise. That matters because a shared design system helps teams reduce design drift, move faster, and make digital work feel recognizably Beghou from the first click. The message for the broader company is that this is working infrastructure for better product delivery, not just a visual refresh.</p>
+      <p class="lead reveal d2">The design system gives Product, Studio, and prototype teams one experience layer, with <strong>consistency, speed, and clearer guardrails</strong> as the goals. Product discussions this month reinforced that the system should first support Arc Studio configuration work, internal product builds, and client-facing prototypes, with controlled adoption rather than an open-ended custom-app promise. That matters because a shared design system helps teams reduce design drift, move faster, and make digital work feel recognizably Beghou from the first click. The design system is working infrastructure for product delivery — used on the next prototype, the next Studio module, the next client demo.</p>
 
       <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
+        <span class="action-label">Reader Action</span>
         <span class="action-text">Use the design system on the next relevant product, prototype, or demo and send gaps back to Product and Design so the system keeps improving.</span>
       </div>
 
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Design System lead]</p>
+
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDOUcVru5l1T76KL-gT_s-PAY9cZck4EwFrFkV3I-3QGGM?e=Licp3d">Design system rollout document <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQAVt5f0CbTRSIuJTRN3Pg48AdloYQbVwcSVTNaXEcXvghk?e=CiHu3C">Design system reference <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:p:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDZAB1vgGo2RKrnf5O3dXcZAVM2ygRSm3wELGLeS3FfJTE?e=UVug7t">Design system overview deck <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDOUcVru5l1T76KL-gT_s-PAY9cZck4EwFrFkV3I-3QGGM?e=Licp3d">Design system rollout document <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQAVt5f0CbTRSIuJTRN3Pg48AdloYQbVwcSVTNaXEcXvghk?e=CiHu3C">Design system reference <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:p:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDZAB1vgGo2RKrnf5O3dXcZAVM2ygRSm3wELGLeS3FfJTE?e=UVug7t">Design system overview deck <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ LOOKING AHEAD ============ -->
+<section class="lookahead">
+  <div class="lookahead-inner">
+    <div class="lookahead-eyebrow reveal">Looking ahead</div>
+    <p class="lookahead-text reveal d1">Issue 02 will track Arc Portal's first month of live use, the Arc Composer Alpha kickoff, and the first wave of intake items pulled into the design-system pilot. <em>[Placeholder: confirm what to commit to teasing.]</em></p>
   </div>
 </section>
 
@@ -669,6 +778,11 @@ footer {
         <div class="role">Designers and prototype builders</div>
         <div class="what">Pilot the design system on real work where consistency and speed matter.</div>
       </div>
+      <div class="engage-item reveal d4">
+        <div class="num">05</div>
+        <div class="role">Anyone reading this</div>
+        <div class="what">Reply with one thing this issue got right and one thing to cover next month.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -676,7 +790,7 @@ footer {
 <footer>
   <div class="foot-inner">
     <div class="foot-credits">
-      Questions or content ideas for future issues<span class="pinkdot">.</span> Patrick Conroy and the Product &amp; Technology Innovation team.
+      Have a question or content idea for a future issue<span class="pinkdot">?</span> Reach Patrick Conroy and the Product &amp; Technology Innovation team in the <a href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&amp;tenantId=4854ac27-6418-4983-9efc-93545436d559" target="_blank" rel="noopener">P&amp;TI Teams channel</a>. One-line replies are welcome — a win, an ask, or something to feature next month.
     </div>
     <div class="foot-meta">Beghou Product Newsletter / Issue 01 / May 2026</div>
   </div>
