@@ -314,6 +314,27 @@ p { margin: 0 0 1.1em; }
   width: 8px; height: 1px;
   background: var(--pink);
 }
+.faq-cta-label {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin: 18px 0 6px;
+}
+.faq-cta-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-dark);
+  margin: 0;
+}
+.faq-cta-body a {
+  color: var(--pink);
+  text-decoration: underline;
+  text-decoration-color: rgba(230,15,101,0.5);
+  text-underline-offset: 3px;
+}
+.faq-cta-body a:hover {
+  text-decoration-color: var(--pink);
+}
 
 /* Reader action strip */
 .action {
@@ -341,6 +362,55 @@ p { margin: 0 0 1.1em; }
   font-size: 14px;
   color: var(--text-light);
   margin: 22px 0 0;
+}
+
+/* Roadmap screenshot block (placeholder; swap inner div for <img>) */
+.roadmap-shot {
+  margin: 36px 0 32px;
+  padding: 0;
+}
+.roadmap-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.roadmap-shot-placeholder {
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+  padding: 56px 24px;
+  background: var(--white);
+  text-align: center;
+}
+.roadmap-shot-icon {
+  font-size: 36px;
+  color: var(--pink);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.roadmap-shot-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.roadmap-shot-hint {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.roadmap-shot-hint code {
+  background: var(--lavender);
+  padding: 1px 6px;
+  border-radius: 2px;
+  letter-spacing: 0;
+  font-size: 11px;
 }
 
 /* Resource chips */
@@ -581,7 +651,7 @@ footer {
     <p class="hero-sub reveal d2">Making Arc easier to enter, easier to build on, and easier to scale.</p>
     <div class="hero-quote reveal d3">
       <p>The Product team's current focus is not just new features. It is the <strong>connective tissue</strong> that makes Arc easier to enter, easier to build on, and easier to scale.</p>
-      <p>This issue highlights five efforts that work together: <strong>Arc Portal</strong> as the front door, <strong>Arc Composer</strong> as the next layer of governed automation, the <strong>roadmap in Jira</strong> as the visibility layer, <strong>intake</strong> as the pathway for new ideas, and the <strong>design system</strong> as the shared experience layer.</p>
+      <p>This issue highlights six efforts that work together: <strong>Arc Composer</strong> as the next layer of governed automation, <strong>Arc Portal</strong> as the front door, the <strong>roadmap in Jira</strong> as the visibility layer, <strong>intake</strong> as the pathway for new ideas, the <strong>design system</strong> as the shared experience layer, and the <strong>out-of-the-box modules</strong> available today.</p>
     </div>
     <div class="scroll-cue reveal d4"><span class="line"></span> Scroll to explore</div>
   </div>
@@ -592,57 +662,24 @@ footer {
   <div class="contents-inner">
     <div class="contents-label">In this issue</div>
     <nav class="contents-links">
-      <a href="#s1"><span class="num">01</span> Arc Portal</a>
-      <a href="#s2"><span class="num">02</span> Arc Composer</a>
+      <a href="#s1"><span class="num">01</span> Arc Composer</a>
+      <a href="#s2"><span class="num">02</span> Arc Portal</a>
       <a href="#s3"><span class="num">03</span> Roadmap &amp; Jira</a>
       <a href="#s4"><span class="num">04</span> Intake</a>
       <a href="#s5"><span class="num">05</span> Design System</a>
+      <a href="#s6"><span class="num">06</span> OOTB Modules</a>
     </nav>
   </div>
 </section>
 
-<!-- ============ 01 ARC PORTAL ============ -->
+<!-- ============ 01 ARC COMPOSER ============ -->
 <section class="topic" id="s1">
   <div class="topic-inner">
-    <div class="topic-num reveal">01<small>Arc Portal</small></div>
-    <div class="topic-body">
-      <span class="topic-tag reveal">The Front Door</span>
-      <h2 class="reveal d1">Arc Portal Rollout: <em>what to expect and how to engage</em></h2>
-      <p class="lead reveal d2">Arc Portal is the central entry point for Arc experiences. The Jira roadmap targets an MVP in the <strong>May–June window</strong>, with follow-on increments later in 2026 for calendar capabilities, alerts and notifications, and third-party integrations. The practical ask for the broader company: use the Portal pathway as the starting point for new Arc conversations, and expect more repeatable FAQs, onboarding guidance, and enablement materials as rollout continues. The goal is a simpler, more consistent way for internal teams to explain Arc and guide clients to the right experience.</p>
-
-      <div class="faq reveal d3">
-        <div class="faq-title">Portal FAQ</div>
-        <ul>
-          <li>Portal is becoming the front door for Arc, with additional capabilities planned in staged follow-on releases.</li>
-          <li>Teams should start with the shared Portal pathway rather than side-channel explanations.</li>
-          <li>Client teams should expect clearer FAQs, onboarding guidance, and a more repeatable entry experience.</li>
-        </ul>
-      </div>
-
-      <div class="action reveal d3">
-        <span class="action-label">Reader Action</span>
-        <span class="action-text">Bring new Arc conversations through the Portal pathway and rely on the shared enablement materials rather than building one-off introductions.</span>
-      </div>
-
-      <p class="byline reveal d3">Owner: [Placeholder: confirm Portal lead]</p>
-
-      <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/SitePages/CollabHome.aspx">Product Solutions hub <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&tenantId=4854ac27-6418-4983-9efc-93545436d559">P&amp;TI Teams channel <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 02 ARC COMPOSER ============ -->
-<section class="topic alt" id="s2">
-  <div class="topic-inner">
-    <div class="topic-num reveal">02<small>Arc Composer</small></div>
+    <div class="topic-num reveal">01<small>Arc Composer</small></div>
     <div class="topic-body">
       <span class="topic-tag reveal">Governed Automation</span>
       <h2 class="reveal d1">Arc Composer: <em>the next layer of governed automation</em></h2>
-      <p class="lead reveal d2">Arc Composer adds a governed configuration layer to Arc, starting with incentive compensation scenarios. The current product plan targets an internal <strong>Alpha in [Placeholder: confirm Alpha month] 2026</strong> and a design-partner <strong>Beta in September 2026</strong>, with broader release planning still in formation. Just as important, the work has moved beyond concept framing into detailed engineering enablers in Jira, including scenario workflows, a shared Composer repository, Postgres setup, Auth0 and Portal Staging integration, Databricks service-principal work, and GitHub alignment. For the broader company, the message is straightforward: position Composer as part of the Arc ecosystem, not as a standalone AI demo.</p>
+      <p class="lead reveal d2"><strong>Arc Composer takes a written plan — starting with incentive compensation — and turns it into a configured, running scenario inside Arc, without engineering rebuilding the logic for every change.</strong> It is the layer that closes the gap between what business teams write down and what Arc actually executes. The current product plan targets an internal <strong>Alpha in [Placeholder: confirm Alpha month] 2026</strong> and a design-partner <strong>Beta in September 2026</strong>, with broader release planning still in formation. The work has moved beyond concept framing into detailed engineering enablers in Jira, including scenario workflows, a shared Composer repository, Postgres setup, Auth0 and Portal Staging integration, Databricks service-principal work, and GitHub alignment. For the broader company, the message is straightforward: position Composer as part of the Arc ecosystem, not as a standalone AI demo.</p>
 
       <div class="faq reveal d3">
         <div class="faq-title">Composer FAQ</div>
@@ -669,6 +706,44 @@ footer {
   </div>
 </section>
 
+<!-- ============ 02 ARC PORTAL ============ -->
+<section class="topic alt" id="s2">
+  <div class="topic-inner">
+    <div class="topic-num reveal">02<small>Arc Portal</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">The Front Door</span>
+      <h2 class="reveal d1">Arc Portal Rollout: <em>what to expect and how to engage</em></h2>
+      <p class="lead reveal d2">Arc Portal is the central entry point for Arc experiences. <strong>Nuvalent</strong> is the first production client (now live), with <strong>Scholar Rock</strong> in active migration and <strong>StealthBio, Servier, and Celcuity</strong> queued behind them. Follow-on capability releases continue through the <strong>May–June window</strong> and into the rest of 2026. The practical ask for the broader company: use the Portal pathway as the starting point for new Arc conversations, and expect more repeatable FAQs, onboarding guidance, and enablement materials as rollout continues.</p>
+
+      <div class="faq reveal d3">
+        <div class="faq-title">What's next on Portal</div>
+        <ul>
+          <li><strong>Calendar module</strong> — first scoped for Nuvalent go-live, then reusable across all portal clients (HIGH priority on the idea board).</li>
+          <li><strong>Data management tiles</strong> — landing-page tiles showing pipeline status, last refresh, and data quality at a glance.</li>
+          <li><strong>Centralized user management</strong> — provisioning across Databricks, Sigma, AQM, and Warehouse UI through one pane of glass.</li>
+          <li><strong>App-bar features</strong> — global search, alerts and notifications, waffle-style app switcher.</li>
+          <li><strong>UI standardisation</strong> — close remaining UX gaps against the design system.</li>
+        </ul>
+        <p class="faq-cta-label">Have a recommendation?</p>
+        <p class="faq-cta-body">Add your idea to the <a href="https://team-1632246899533.atlassian.net/jira/polaris/projects/POR" target="_blank" rel="noopener">Arc Portal idea board</a>, or comment on an existing item to push it up the queue.</p>
+      </div>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader Action</span>
+        <span class="action-text">Bring new Arc conversations through the Portal pathway and rely on the shared enablement materials rather than building one-off introductions.</span>
+      </div>
+
+      <p class="byline reveal d3">Owner: [Placeholder: confirm Portal lead]</p>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/SitePages/CollabHome.aspx">Product Solutions hub <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&tenantId=4854ac27-6418-4983-9efc-93545436d559">P&amp;TI Teams channel <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 03 ROADMAP ============ -->
 <section class="topic" id="s3">
   <div class="topic-inner">
@@ -677,6 +752,17 @@ footer {
       <span class="topic-tag reveal">The Visibility Layer</span>
       <h2 class="reveal d1">Roadmap and Jira: <em>making priorities more visible</em></h2>
       <p class="lead reveal d2">More of the roadmap now lives in Jira instead of in meetings, which makes it easier to see and easier to discuss. Current priorities include <strong>Arc Portal</strong>, the <strong>Arc Composer Beta path</strong>, the <strong>Arc Studio React UI upgrade</strong> with out-of-the-box modules, <strong>Arc DE</strong> operational tooling, and <strong>Alignment migration</strong> into the web experience. That shift gives teams a clearer view of sequencing, dependencies, and what is actively moving now.</p>
+
+      <figure class="roadmap-shot reveal d3">
+        <!-- To replace this placeholder: drop a screenshot named roadmap.png in this
+             repo and swap the inner <div> for <img src="roadmap.png" alt="Arc product
+             roadmap in Jira Polaris, showing the current portfolio of in-flight items"/> -->
+        <div class="roadmap-shot-placeholder">
+          <div class="roadmap-shot-icon">⊞</div>
+          <div class="roadmap-shot-label">[Roadmap screenshot]</div>
+          <div class="roadmap-shot-hint">Drop <code>roadmap.png</code> in the repo<br>and replace this placeholder.</div>
+        </div>
+      </figure>
 
       <div class="action reveal d3">
         <span class="action-label">Reader Action</span>
@@ -701,18 +787,18 @@ footer {
       <span class="topic-tag reveal">Pathway for New Ideas</span>
       <h2 class="reveal d1">Intake: <em>one path, one review rhythm</em></h2>
       <!-- [Placeholder: confirm intake submission count for Q2 2026 once connected list source is available] -->
-      <p class="lead reveal d2">The intake form is the shared pathway for product ideas, module requests, and change requests. The most important change is not a headline number. It is that more requests now enter the <strong>same review rhythm</strong>, which makes them easier to compare, prioritize, and shape consistently.</p>
+      <p class="lead reveal d2">The intake form is the shared pathway for product ideas, module requests, and change requests. The most important change is not a headline number. It is that more requests now enter the <strong>same review rhythm</strong>, which makes them easier to compare, prioritize, and shape consistently. <strong>What is already in flight is now visible on the open idea board</strong> — open it, scan what is queued, and add your own.</p>
 
       <div class="action reveal d3">
         <span class="action-label">Reader Action</span>
-        <span class="action-text">Submit product ideas and change requests through the intake form so they can be reviewed in the same operating rhythm.</span>
+        <span class="action-text">Open the idea board, vote on what matters to your work, and submit anything new through the intake form so it joins the same review rhythm.</span>
       </div>
 
       <p class="byline reveal d3">Owner: [Placeholder: confirm Intake lead]</p>
 
       <div class="resources reveal d4">
         <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I">Product intake form <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Open idea board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -743,11 +829,45 @@ footer {
   </div>
 </section>
 
+<!-- ============ 06 OOTB MODULES ============ -->
+<section class="topic alt" id="s6">
+  <div class="topic-inner">
+    <div class="topic-num reveal">06<small>OOTB Modules</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">Available Today</span>
+      <h2 class="reveal d1">Out-of-the-box modules: <em>what is already shipping</em></h2>
+      <p class="lead reveal d2">Arc Portal is not a blank box. It comes with a growing library of <strong>out-of-the-box modules</strong> that clients can turn on without custom build. Each module has its own deployment workstream in PADO; the current state of the catalog:</p>
+
+      <div class="faq reveal d3">
+        <div class="faq-title">Module status</div>
+        <ul>
+          <li><strong>Clinical Supply Chain Module</strong> — <em>deployed</em>. PRD signed off, UI mocked, demo live, initial data delivered.</li>
+          <li><strong>IC (Incentive Compensation) Module</strong> — <em>in progress</em>. Paper design complete, UI mockups in build, demo environment in finalisation.</li>
+          <li><strong>Data Aggregation Module</strong> — <em>in progress</em>. Vendor UI demo done, PRD sign-off active, business case in flight.</li>
+          <li><strong>Alignment Module</strong> — <em>queued</em>. Kickoff meeting pending.</li>
+        </ul>
+      </div>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader Action</span>
+        <span class="action-text">Pitch a client into the right OOTB module rather than scoping a one-off. If you do not see a fit, propose a new module through intake.</span>
+      </div>
+
+      <p class="byline reveal d3">Owner: [Placeholder: confirm OOTB Modules lead]</p>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouarc-staging.azurewebsites.net/demo-client/deployments">Live module catalog <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/PADO/list">Module deployment board <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ LOOKING AHEAD ============ -->
 <section class="lookahead">
   <div class="lookahead-inner">
     <div class="lookahead-eyebrow reveal">Looking ahead</div>
-    <p class="lookahead-text reveal d1">Issue 02 will track Arc Portal's first month of live use, the Arc Composer Alpha kickoff, and the first wave of intake items pulled into the design-system pilot. <em>[Placeholder: confirm what to commit to teasing.]</em></p>
+    <p class="lookahead-text reveal d1">Issue 02 will track Nuvalent's first month on Arc Portal, the Arc Composer Alpha kickoff, the next OOTB module to ship, and the first wave of intake items pulled into the design-system pilot. <em>[Placeholder: confirm what to commit to teasing.]</em></p>
   </div>
 </section>
 
