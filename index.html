@@ -428,10 +428,66 @@ footer {
 }
 .foot-inner {
   max-width: var(--max); margin: 0 auto;
-  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end;
+}
+
+/* Standing resources strip (top of footer) */
+.foot-resources {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 36px;
 }
 @media (max-width: 720px) {
-  .foot-inner { grid-template-columns: 1fr; }
+  .foot-resources { grid-template-columns: 1fr; gap: 18px; }
+}
+.foot-resources-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 600;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.foot-resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.foot-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.86);
+  padding: 9px 16px 9px 14px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-family: var(--body);
+  transition: all .18s ease;
+}
+.foot-chip:hover {
+  background: var(--pink);
+  color: var(--white);
+  border-color: var(--pink);
+  transform: translateY(-1px);
+}
+.foot-chip svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.55; }
+.foot-chip:hover svg { opacity: 1; }
+
+/* Bottom credits row */
+.foot-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: end;
+}
+@media (max-width: 720px) {
+  .foot-bottom { grid-template-columns: 1fr; }
 }
 .foot-credits {
   font-family: var(--display);
@@ -675,10 +731,20 @@ footer {
 
 <footer>
   <div class="foot-inner">
-    <div class="foot-credits">
-      Questions or content ideas for future issues<span class="pinkdot">.</span> Patrick Conroy and the Product &amp; Technology Innovation team.
+    <div class="foot-resources">
+      <div class="foot-resources-label">Standing<br>Resources</div>
+      <div class="foot-resources-list">
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/personal/patrick_conroy_beghouconsulting_com/Lists/Demo%20Owners/AllItems.aspx?viewid=1f9a58a8-0279-4912-b2b7-07e1f75cc127&env=WebViewList&npsAction=createList">Demo Owners &amp; Modules <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Lists/Project%20Playbook/AllItems.aspx">Project Playbook <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FProductSolutions%2FShared%20Documents%2FBRD%20Repository&viewid=401c024f%2Df64f%2D4f5f%2D8013%2D6d146b017c71&newTargetListUrl=%2Fsites%2FProductSolutions%2FShared%20Documents&viewpath=%2Fsites%2FProductSolutions%2FShared%20Documents%2FForms%2FAllItems%2Easpx">BRD Repository <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
     </div>
-    <div class="foot-meta">Beghou Product Newsletter / Issue 01 / May 2026</div>
+    <div class="foot-bottom">
+      <div class="foot-credits">
+        Questions or content ideas for future issues<span class="pinkdot">.</span> Patrick Conroy and the Product &amp; Technology Innovation team.
+      </div>
+      <div class="foot-meta">Beghou Product Newsletter / Issue 01 / May 2026</div>
+    </div>
   </div>
 </footer>
 
