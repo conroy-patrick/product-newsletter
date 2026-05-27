@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beghou Product Newsletter — Issue 2, Arc Portal Special</title>
+<title>Beghou Product Newsletter — Issue 1, May 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
@@ -350,84 +350,6 @@ p { margin: 0 0 1.1em; }
   border-color: var(--navy);
 }
 
-/* =============== SCREENSHOT / USE CASE BLOCK =============== */
-.screenshot-block {
-  margin: 36px 0 28px;
-  background: var(--white);
-  border: 1.5px dashed var(--pink);
-  border-radius: 4px;
-  padding: 44px 32px;
-  text-align: center;
-}
-.topic.alt .screenshot-block { background: var(--white); }
-.screenshot-eyebrow {
-  font-family: var(--mono);
-  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--pink); font-weight: 600;
-  margin-bottom: 14px;
-}
-.screenshot-placeholder {
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 1.25;
-  color: var(--navy);
-  letter-spacing: -0.01em;
-  margin-bottom: 14px;
-}
-.screenshot-caption {
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: var(--text-mid);
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-/* =============== TEAM CREDIT BLOCK =============== */
-.team-credit {
-  margin: 36px 0 0;
-  padding: 28px 30px;
-  background: var(--navy);
-  color: var(--white);
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-}
-.team-credit::before {
-  content: '';
-  position: absolute;
-  width: 280px; height: 280px;
-  top: -120px; right: -80px;
-  background: radial-gradient(circle, rgba(230,15,101,0.35) 0%, transparent 65%);
-  filter: blur(30px);
-  pointer-events: none;
-}
-.team-credit-inner { position: relative; z-index: 1; }
-.team-credit-eyebrow {
-  font-family: var(--mono);
-  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--pink); font-weight: 600;
-  margin-bottom: 14px;
-}
-.team-credit-heading {
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.3;
-  color: var(--white);
-  margin: 0 0 18px;
-  letter-spacing: -0.01em;
-}
-.team-credit-list {
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.86);
-  margin: 0;
-}
-.team-credit-list strong { color: var(--white); font-weight: 600; }
-
 /* =============== ENGAGE =============== */
 .engage {
   background: var(--navy);
@@ -507,6 +429,8 @@ footer {
 .foot-inner {
   max-width: var(--max); margin: 0 auto;
 }
+
+/* Standing resources strip (top of footer) */
 .foot-resources {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -554,6 +478,8 @@ footer {
 }
 .foot-chip svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.55; }
 .foot-chip:hover svg { opacity: 1; }
+
+/* Bottom credits row */
 .foot-bottom {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -583,18 +509,6 @@ footer {
 @media (max-width: 720px) {
   .foot-meta { text-align: left; }
 }
-.foot-archive-link {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  text-decoration: none;
-  transition: color .18s ease;
-}
-.foot-archive-link:hover { color: var(--pink); }
 
 /* =============== REVEAL ANIMATIONS =============== */
 .reveal {
@@ -621,7 +535,7 @@ footer {
 <header class="topbar">
   <div class="topbar-inner">
     <div class="wordmark">BEGHOU<span class="dot">.</span></div>
-    <div class="topbar-meta">Issue 02 / Arc Portal Special</div>
+    <div class="topbar-meta">Issue 01 / May 2026</div>
   </div>
 </header>
 
@@ -629,11 +543,11 @@ footer {
 <section class="hero">
   <div class="hero-inner">
     <div class="eyebrow reveal"><span class="pulse"></span> Product &amp; Technology Innovation</div>
-    <h1 class="reveal d1">Inside <em>Arc Portal</em></h1>
-    <p class="hero-sub reveal d2">The central operational hub for Arc &mdash; now in production with Nuvalent.</p>
+    <h1 class="reveal d1">Inside <em>Product</em></h1>
+    <p class="hero-sub reveal d2">Making Arc easier to enter, easier to build on, and easier to scale.</p>
     <div class="hero-quote reveal d3">
-      <p>Arc Portal is the central admin and access hub for Beghou&rsquo;s pharma software estate. <strong>One place</strong> for Beghou and its clients to manage who can use which application, on what terms.</p>
-      <p>This issue covers what shipped, what&rsquo;s coming next, the team that built it, and the first production deployment &mdash; <strong>Nuvalent</strong>, now live.</p>
+      <p>The Product team's current focus is not just new features. It is the <strong>connective tissue</strong> that makes Arc easier to enter, easier to build on, and easier to scale.</p>
+      <p>This issue highlights five efforts that work together: <strong>Arc Portal</strong> as the front door, <strong>Arc Composer</strong> as the next layer of governed automation, the <strong>roadmap in Jira</strong> as the visibility layer, <strong>intake</strong> as the pathway for new ideas, and the <strong>design system</strong> as the shared experience layer.</p>
     </div>
     <div class="scroll-cue reveal d4"><span class="line"></span> Scroll to explore</div>
   </div>
@@ -644,150 +558,141 @@ footer {
   <div class="contents-inner">
     <div class="contents-label">In this issue</div>
     <nav class="contents-links">
-      <a href="#s1"><span class="num">01</span> The Portal</a>
-      <a href="#s2"><span class="num">02</span> Available Now</a>
-      <a href="#s3"><span class="num">03</span> What&rsquo;s Next</a>
-      <a href="#s4"><span class="num">04</span> Built &amp; Proven</a>
+      <a href="#s1"><span class="num">01</span> Arc Portal</a>
+      <a href="#s2"><span class="num">02</span> Arc Composer</a>
+      <a href="#s3"><span class="num">03</span> Roadmap &amp; Jira</a>
+      <a href="#s4"><span class="num">04</span> Intake</a>
+      <a href="#s5"><span class="num">05</span> Design System</a>
     </nav>
   </div>
 </section>
 
-<!-- ============ 01 THE PORTAL ============ -->
+<!-- ============ 01 ARC PORTAL ============ -->
 <section class="topic" id="s1">
   <div class="topic-inner">
-    <div class="topic-num reveal">01<small>The Portal</small></div>
+    <div class="topic-num reveal">01<small>Arc Portal</small></div>
     <div class="topic-body">
       <span class="topic-tag reveal">The Front Door</span>
-      <h2 class="reveal d1">Arc Portal: <em>the central operational hub for Arc</em></h2>
-      <p class="lead reveal d2">Arc Portal is the central admin and access hub for Beghou&rsquo;s pharma software estate. One place for Beghou and its clients to manage who can use which application, on what terms &mdash; <strong>Commercial Targeting, Goal Setting, Roster, Tableau, CRM, Databricks, AQM, Affiliations, DCR, Sigma, and the User Guides</strong>, all behind a single sign-on. <strong>Nuvalent</strong> is the first production client (live now), with <strong>Scholar Rock</strong> in active migration and <strong>StealthBio, Servier, and Celcuity</strong> queued behind them. Phase 1 moved the Portal from a demo-stage product toward a single operational hub. Phase 2 makes it the primary front door for Arc.</p>
+      <h2 class="reveal d1">Arc Portal Rollout: <em>what to expect and how to engage</em></h2>
+      <p class="lead reveal d2">Arc Portal is being positioned as the central entry point for Arc experiences, with the current roadmap in Jira showing an MVP in the <strong>May–June window</strong> and follow-on increments for calendar capabilities, alerts and notifications, and third-party integrations later in 2026. The practical ask for the broader company is simple: use the Portal pathway as the starting point for new Arc conversations, and expect more repeatable FAQs, onboarding guidance, and enablement materials as rollout continues. The goal is a simpler, more consistent way for internal teams to explain Arc and guide clients to the right experience.</p>
+
+      <div class="faq reveal d3">
+        <div class="faq-title">Portal FAQ</div>
+        <ul>
+          <li>Portal is becoming the front door for Arc, with additional capabilities planned in staged follow-on releases.</li>
+          <li>Teams should start with the shared Portal pathway rather than side-channel explanations.</li>
+          <li>Client teams should expect clearer FAQs, onboarding guidance, and a more repeatable entry experience.</li>
+        </ul>
+      </div>
 
       <div class="action reveal d3">
         <span class="action-label">Reader<br>Action</span>
-        <span class="action-text">Bring new Arc conversations through the Portal pathway. If you have a client whose access pattern fits Phase 1 today &mdash; or a calendar or Arc DE need that aligns with Phase 2 &mdash; flag it to Siva and Patrick so it lands on the right scoping list.</span>
+        <span class="action-text">Bring new Arc conversations through the Portal pathway and rely on the shared enablement materials rather than building one-off introductions.</span>
       </div>
 
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FProductSolutions%2FShared%20Documents%2FModule%20Repository%2FArc%20Portal%2FEngineering">Arc Portal engineering docs <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/POR">Portal idea board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/RC">Portal release board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/SitePages/CollabHome.aspx">Product Solutions hub <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://teams.microsoft.com/l/channel/19%3ABbF4UqbIRF7UKndzkira-E34TGT11hJIGBmrSTYVfbI1%40thread.tacv2/Product%20and%20Technology%20Innovation?groupId=b5bee728-d74e-41b5-855e-5a2d253cc7be&tenantId=4854ac27-6418-4983-9efc-93545436d559">P&amp;TI Teams channel <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 02 AVAILABLE NOW (PHASE 1) ============ -->
+<!-- ============ 02 ARC COMPOSER ============ -->
 <section class="topic alt" id="s2">
   <div class="topic-inner">
-    <div class="topic-num reveal">02<small>Available Now</small></div>
+    <div class="topic-num reveal">02<small>Arc Composer</small></div>
     <div class="topic-body">
-      <span class="topic-tag reveal">Shipped &mdash; Phase 1</span>
-      <h2 class="reveal d1">What&rsquo;s in production today: <em>fifteen capability areas</em></h2>
-      <p class="lead reveal d2">Phase 1 &mdash; the version Nuvalent runs today &mdash; covers fifteen capability areas in production. Single sign-on through Beghou&rsquo;s enterprise identity provider. Full multi-tenant isolation, with each client&rsquo;s users, branding, and dashboard kept separate. Three platform roles plus per-app product roles, enforced server-side on every endpoint. And the piece that makes the rollout possible at all &mdash; a Downstream Sync Service that pushes every access change to legacy provisioning systems with reliable delivery, automatic retries, and a full audit trail.</p>
+      <span class="topic-tag reveal">Governed Automation</span>
+      <h2 class="reveal d1">Arc Composer: <em>the next layer of governed automation</em></h2>
+      <p class="lead reveal d2">Arc Composer is being built as a governed configuration layer for Arc, starting with incentive compensation scenarios. The current product plan targets an internal <strong>Alpha this summer</strong> and a design-partner <strong>Beta in September 2026</strong>, with broader release planning still in formation. Just as important, the work has moved beyond concept framing into detailed engineering enablers in Jira, including scenario workflows, a shared Composer repository, Postgres setup, Auth0 and Portal Staging integration, Databricks service-principal work, and GitHub alignment. For the broader company, the message is straightforward: position Composer as part of the Arc ecosystem, not as a standalone AI demo.</p>
 
       <div class="faq reveal d3">
-        <div class="faq-title">Phase 1 capability map</div>
+        <div class="faq-title">Composer FAQ</div>
         <ul>
-          <li><strong>Sign-on &amp; identity.</strong> SSO through Beghou&rsquo;s enterprise IdP, rate-limited login, one-time-code step-up for sensitive actions, one-click into every assigned app.</li>
-          <li><strong>Multi-tenancy.</strong> Each client fully isolated &mdash; its own users, apps, branding, and dashboard. Beghou admins see across; client admins see only their own tenant.</li>
-          <li><strong>User management.</strong> Single-add, bulk CSV upload with column mapping, soft-delete only, profile-picture upload with in-browser cropping.</li>
-          <li><strong>Roles &amp; permissions.</strong> Global Admin / ClientAdmin / RegularUser, plus per-app product roles. Server-enforced on every endpoint &mdash; the UI cannot be bypassed.</li>
-          <li><strong>App &amp; deployment catalogue.</strong> Beghou-delivered apps registered once with role taxonomies; per-client deployments carry their own URL, version, support contact, and icon.</li>
-          <li><strong>Access assignment.</strong> Grant, revoke, and bulk-manage per-user / per-app role bindings.</li>
-          <li><strong>Per-client branding.</strong> Logo upload (desktop + mobile) and a primary-colour picker that re-themes the UI in real time.</li>
-          <li><strong>Dashboard.</strong> Per-client, tile-based, responsive (1/2/3 columns), drag-positioned, with custom-HTML tiles gated on role and deployment access.</li>
-          <li><strong>Templates Library + Code Playground.</strong> Per-client HTML widget management with an in-browser editor and live preview iframe.</li>
-          <li><strong>Downstream Sync Service.</strong> Every access change pushed to legacy provisioning systems with reliable delivery, automatic retries, per-event status tracking, and a full per-attempt audit trail.</li>
-          <li><strong>Sync Audit Log UI.</strong> Filterable grid of every sync attempt, with operation badges, expandable detail rows, and full request / response visibility.</li>
-          <li><strong>Observability + security hardening.</strong> Server-side auth on every endpoint, sanitised uploads, security headers, CORS allow-list, health-check endpoints, structured logging with correlation IDs.</li>
+          <li>Arc Composer is a governed Arc layer for turning plan intent into configured execution workflows.</li>
+          <li>The current plan points to Alpha this summer and a design-partner Beta in September 2026.</li>
+          <li>It should be positioned as part of the Arc ecosystem, not as a general AI demo.</li>
         </ul>
       </div>
 
       <div class="action reveal d3">
         <span class="action-label">Reader<br>Action</span>
-        <span class="action-text">Pitch a client whose access-management pain fits Phase 1 today. If you&rsquo;re demoing, point them at the engineering docs and the Nuvalent deployment as the proof.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 03 WHAT'S NEXT (PHASE 2) ============ -->
-<section class="topic" id="s3">
-  <div class="topic-inner">
-    <div class="topic-num reveal">03<small>What&rsquo;s Next</small></div>
-    <div class="topic-body">
-      <span class="topic-tag reveal">In Build &mdash; Phase 2 v1.1</span>
-      <h2 class="reveal d1">From sign-in to running: <em>Calendar + Arc DE permissioning</em></h2>
-      <p class="lead reveal d2">Phase 2 v1.1 &mdash; in BRD now, owned by Siva Kristipati &mdash; adds two capabilities that move the Portal from <em>&ldquo;the place clients sign in&rdquo;</em> to <em>&ldquo;the place clients run from.&rdquo;</em> Together they consolidate internal product access under one Portal-driven model and remove the need for anyone &mdash; internal or client &mdash; to drop into back-end systems to grant, revoke, or schedule.</p>
-
-      <div class="faq reveal d3">
-        <div class="faq-title">Up next on the Portal</div>
-        <ul>
-          <li><strong>Calendar Module.</strong> Native client-facing event scheduling on the Portal. Client admins upload events; all client users see them in real time, with tenant isolation, audit logging, and admin-only write access. Requested by the Nuvalent team; committed for end of Q3; #1 priority and the immediate next feature in build.</li>
-          <li><strong>Arc DE permissioning from the Portal.</strong> Databricks-based Arc DE RBAC managed entirely through Portal admin controls, propagated via a Function App intermediary, with auto-revoke on user deactivation and separation-of-duties enforced (users cannot modify their own permissions). Consolidates internal product access under one Portal-driven model.</li>
-        </ul>
-      </div>
-
-      <div class="action reveal d3">
-        <span class="action-label">Reader<br>Action</span>
-        <span class="action-text">If a client has a calendar requirement, or if your team is still managing Arc DE access directly in Databricks, surface it to Siva so it shapes the Phase 2 cut.</span>
+        <span class="action-text">Use the Composer FAQ before discussing timelines or external positioning, and route readiness questions back to the Composer team.</span>
       </div>
 
       <div class="resources reveal d4">
-        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/POR">Portal idea board (POR) <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/RC">Portal release board (RC) <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:w:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Arc%20Composer%20questions.docx?d=wff4648aa38b74283ae51962b8483b219&csf=1&web=1&e=7S6X4P">Arc Composer FAQ <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:p:/r/sites/ProductSolutions/Shared%20Documents/Arc%20Composer/Presentations/Composer%20-%20Release%20scope%20for%20board%20v1.pptx?d=wdca6d6aef21c49cd91a42608b736e007&csf=1&web=1&e=IXkfMt">Release-scope deck <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Composer Jira board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 BUILT & PROVEN ============ -->
-<section class="topic alt" id="s4">
+<!-- ============ 03 ROADMAP ============ -->
+<section class="topic" id="s3">
   <div class="topic-inner">
-    <div class="topic-num reveal">04<small>Built &amp; Proven</small></div>
+    <div class="topic-num reveal">03<small>Roadmap</small></div>
     <div class="topic-body">
-      <span class="topic-tag reveal">Use Case &mdash; Nuvalent</span>
-      <h2 class="reveal d1">The first production proof: <em>Nuvalent on Arc Portal</em></h2>
-      <p class="lead reveal d2">The Nuvalent go-live is the first end-to-end proof of the model. Beghou admins provisioned, branded, and stood up the client tenant without engineering rebuilding anything for that one deployment. Every access change flowed through the Downstream Sync Service into the legacy apps. Screenshots from the release are below.</p>
-
-      <!--
-        SCREENSHOT SWAP INSTRUCTIONS:
-        Drop the Nuvalent screenshots into the repo (e.g. /img/portal-nuvalent-login.png,
-        /img/portal-nuvalent-dashboard.png, /img/portal-nuvalent-users.png,
-        /img/portal-nuvalent-synclog.png) and replace the dashed-border placeholder
-        block below with a <figure> tag or a small <img> grid. Suggested four shots:
-          1. Branded login page
-          2. Tenant-branded dashboard with tiles
-          3. User grid showing role assignments
-          4. Sync log entry confirming downstream provisioning
-      -->
-      <div class="screenshot-block reveal d3">
-        <div class="screenshot-eyebrow">Use Case &mdash; Nuvalent Release</div>
-        <div class="screenshot-placeholder">[Placeholder: Nuvalent client release screenshots]</div>
-        <p class="screenshot-caption">
-          Suggested four shots: branded login page, tenant dashboard with tiles,
-          user grid with role assignments, and a sync log entry confirming downstream
-          provisioning. Drop the <code>.png</code> files into the repo and swap this
-          block for a <code>&lt;figure&gt;</code> grid.
-        </p>
-      </div>
-
-      <div class="team-credit reveal d3">
-        <div class="team-credit-inner">
-          <div class="team-credit-eyebrow">Built by</div>
-          <h3 class="team-credit-heading">The Portal shipped because of this team.</h3>
-          <p class="team-credit-list">
-            <strong>Siva Kristipati</strong>, <strong>Dan Cardinal</strong>,
-            <strong>Phillip Heyrman</strong>, <strong>Narasimha Marripudi</strong>,
-            <strong>Bhanu Chandar Reddy</strong>, <strong>Vashni Roy</strong>,
-            <strong>Kapil Raj</strong>, <strong>Santhosh Sivala</strong>, and
-            <strong>Pranitha Kamsani</strong>.
-          </p>
-        </div>
-      </div>
+      <span class="topic-tag reveal">The Visibility Layer</span>
+      <h2 class="reveal d1">Roadmap and Jira: <em>making priorities more visible</em></h2>
+      <p class="lead reveal d2">The roadmap is becoming easier to see and easier to discuss because more of the work is now being captured in Jira instead of living only in meetings. Current priorities include <strong>Arc Portal</strong>, the <strong>Arc Composer Beta path</strong>, the <strong>Arc Studio React UI upgrade</strong> with out-of-the-box modules, <strong>Arc DE</strong> operational tooling, and <strong>Alignment migration</strong> into the web experience. That shift gives teams a clearer view of sequencing, dependencies, and what is actively moving now.</p>
 
       <div class="action reveal d3">
         <span class="action-label">Reader<br>Action</span>
-        <span class="action-text">Reply to this issue with a Portal win, a client question, or a recommendation for what to feature next. One-line replies are welcome.</span>
+        <span class="action-text">Use the roadmap board and Jira discussions to understand active priorities and where work is headed next.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/COM/list">Arc Composer Jira board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 INTAKE ============ -->
+<section class="topic alt" id="s4">
+  <div class="topic-inner">
+    <div class="topic-num reveal">04<small>Intake</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">Pathway for New Ideas</span>
+      <h2 class="reveal d1">A better intake path <em>for ideas and change requests</em></h2>
+      <p class="lead reveal d2">The intake form is becoming the shared pathway for product ideas, module requests, and change requests. The most important change is not a headline number. It is that more requests can now enter the <strong>same review rhythm</strong>, which makes them easier to compare, prioritize, and shape consistently. Because the connected list source was not accessible from this environment, this issue avoids publishing an unverified submission count and keeps the message focused on the improved path itself.</p>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">Submit product ideas and change requests through the intake form so they can be reviewed in the same operating rhythm.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I">Product intake form <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/PROD/ideas/view/7487010">Product roadmap board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 DESIGN SYSTEM ============ -->
+<section class="topic" id="s5">
+  <div class="topic-inner">
+    <div class="topic-num reveal">05<small>Design System</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">Shared Experience Layer</span>
+      <h2 class="reveal d1">Design System Rollout: <em>one shared experience layer</em></h2>
+      <p class="lead reveal d2">The design system rollout is about <strong>consistency, speed, and clearer guardrails</strong>. Product discussions this month reinforced that the system should first support Arc Studio configuration work, internal product builds, and client-facing prototypes, with controlled adoption rather than an open-ended custom-app promise. That matters because a shared design system helps teams reduce design drift, move faster, and make digital work feel recognizably Beghou from the first click. The message for the broader company is that this is working infrastructure for better product delivery, not just a visual refresh.</p>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">Use the design system on the next relevant product, prototype, or demo and send gaps back to Product and Design so the system keeps improving.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDOUcVru5l1T76KL-gT_s-PAY9cZck4EwFrFkV3I-3QGGM?e=Licp3d">Design system rollout document <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:w:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQAVt5f0CbTRSIuJTRN3Pg48AdloYQbVwcSVTNaXEcXvghk?e=CiHu3C">Design system reference <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/:p:/g/personal/kd_arneja_beghouconsultinginc_onmicrosoft_com/IQDZAB1vgGo2RKrnf5O3dXcZAVM2ygRSm3wELGLeS3FfJTE?e=UVug7t">Design system overview deck <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -797,28 +702,28 @@ footer {
 <section class="engage">
   <div class="engage-inner">
     <div class="engage-eyebrow reveal">Ways to engage</div>
-    <h2 class="reveal d1">Pick the line that matches your role &mdash; <em>and start there.</em></h2>
+    <h2 class="reveal d1">Pick the line that matches your role — <em>and start there.</em></h2>
 
     <div class="engage-list">
       <div class="engage-item reveal d1">
         <div class="num">01</div>
         <div class="role">Anyone bringing a client into Arc</div>
-        <div class="what">Use Arc Portal as the front door. If access management is the pain, Phase 1 already covers it &mdash; loop Siva and Patrick in early.</div>
+        <div class="what">Use Arc Portal materials and the Product &amp; Technology Innovation channel for new Arc conversations.</div>
       </div>
       <div class="engage-item reveal d2">
         <div class="num">02</div>
-        <div class="role">Engagement leads on Nuvalent-adjacent accounts</div>
-        <div class="what">Pull the Nuvalent deployment as the reference. The pattern repeats; the second client is easier than the first.</div>
+        <div class="role">Anyone talking about Composer</div>
+        <div class="what">Route Composer positioning and readiness questions through the official FAQ and team channels.</div>
       </div>
       <div class="engage-item reveal d3">
         <div class="num">03</div>
-        <div class="role">Anyone with a calendar or Arc DE access need</div>
-        <div class="what">Surface the use case now so it shapes Phase 2. The Calendar Module and Arc DE permissioning are both in active build.</div>
+        <div class="role">Leads and stakeholders</div>
+        <div class="what">Use the roadmap board and intake pathway to make work visible earlier.</div>
       </div>
       <div class="engage-item reveal d4">
         <div class="num">04</div>
         <div class="role">Designers and prototype builders</div>
-        <div class="what">The Portal dashboard is a Templates Library underneath. If you build a useful widget for a client, it can live in the catalogue.</div>
+        <div class="what">Pilot the design system on real work where consistency and speed matter.</div>
       </div>
     </div>
   </div>
@@ -838,10 +743,7 @@ footer {
       <div class="foot-credits">
         Questions or content ideas for future issues<span class="pinkdot">.</span> Patrick Conroy and the Product &amp; Technology Innovation team.
       </div>
-      <div class="foot-meta">
-        Beghou Product Newsletter / Issue 02 / Arc Portal Special<br>
-        <a class="foot-archive-link" href="issue-01.html">&larr; Issue 01 / May 2026</a>
-      </div>
+      <div class="foot-meta">Beghou Product Newsletter / Issue 01 / May 2026</div>
     </div>
   </div>
 </footer>
