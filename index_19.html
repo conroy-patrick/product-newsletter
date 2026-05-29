@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beghou Product Newsletter — Issue 1, Arc Portal Special</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:        #020434;
+  --navy-2:      #0A0D45;
+  --navy-3:      #161A5C;
+  --pink:        #E60F65;
+  --pink-soft:   #FFE4F0;
+  --lavender:    #EDF0FA;
+  --lavender-2:  #F4F6FB;
+  --white:       #FFFFFF;
+  --light-gray:  #F4F5F9;
+  --border:      #D8DCE8;
+  --text-dark:   #1A1D3A;
+  --text-mid:    #4A4F6B;
+  --text-light:  #8B91AA;
+  --orange:      #F97316;
+
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --max: 1180px;
+  --gutter: clamp(20px, 4vw, 56px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--text-dark);
+  background: var(--white);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+p { margin: 0 0 1.1em; }
+::selection { background: var(--pink); color: var(--white); }
+
+/* =============== TOP BAR =============== */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(2, 4, 52, 0.92);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.topbar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px var(--gutter);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px;
+}
+.wordmark {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 15px;
+}
+.wordmark .dot { color: var(--pink); }
+.topbar-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+/* =============== HERO =============== */
+.hero {
+  position: relative;
+  background: var(--navy);
+  color: var(--white);
+  overflow: hidden;
+  padding: clamp(80px, 14vh, 160px) var(--gutter) clamp(80px, 12vh, 140px);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 720px; height: 720px;
+  top: -260px; right: -180px;
+  background: radial-gradient(circle, rgba(230,15,101,0.55) 0%, rgba(230,15,101,0.15) 35%, transparent 65%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.045) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
+}
+.hero-inner { position: relative; max-width: var(--max); margin: 0 auto; z-index: 1; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 9px 16px;
+  background: rgba(230,15,101,0.16);
+  border: 1px solid rgba(230,15,101,0.4);
+  color: var(--pink-soft);
+  border-radius: 999px;
+  margin-bottom: 32px;
+}
+.eyebrow .pulse {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--pink);
+  box-shadow: 0 0 0 0 rgba(230,15,101,0.8);
+  animation: pulse 2.4s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(230,15,101,0.7); }
+  70%  { box-shadow: 0 0 0 14px rgba(230,15,101,0); }
+  100% { box-shadow: 0 0 0 0 rgba(230,15,101,0); }
+}
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(48px, 9vw, 116px);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  margin: 0 0 28px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--pink);
+  font-weight: 300;
+}
+.hero-sub {
+  font-family: var(--display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.35;
+  color: rgba(255,255,255,0.82);
+  max-width: 720px;
+  margin: 0 0 40px;
+}
+.hero-quote {
+  position: relative;
+  max-width: 720px;
+  padding-left: 28px;
+  border-left: 2px solid var(--pink);
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 48px;
+}
+.hero-quote strong { color: var(--white); font-weight: 600; }
+
+/* ============ HERO PORTAL TEASER ============ */
+.hero-portal-teaser {
+  position: relative;
+  max-width: 820px;
+  margin: 0 0 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+}
+.hero-portal-teaser-label {
+  position: absolute;
+  bottom: 16px; left: 16px;
+  z-index: 2;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(2,4,52,0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(230,15,101,0.4);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--pink-soft);
+}
+.hero-portal-teaser-label .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); }
+.hero-portal-teaser img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.scroll-cue {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.scroll-cue .line {
+  width: 56px; height: 1px;
+  background: linear-gradient(to right, var(--pink), transparent);
+}
+
+/* =============== TOC / CONTENTS RAIL =============== */
+.contents {
+  background: var(--lavender);
+  border-bottom: 1px solid var(--border);
+  padding: 28px var(--gutter);
+}
+.contents-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center;
+}
+.contents-label {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-mid);
+}
+.contents-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.contents-links a {
+  display: inline-flex; align-items: baseline; gap: 7px;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-mid);
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.contents-links a:hover { color: var(--pink); border-bottom-color: var(--pink); }
+.contents-links .num {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--pink); font-weight: 600;
+}
+@media (max-width: 720px) {
+  .contents-inner { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* =============== TOPIC SECTION =============== */
+.topic {
+  padding: clamp(80px, 11vh, 130px) var(--gutter);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.topic.alt { background: var(--lavender-2); }
+.topic-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 180px 1fr; gap: 56px;
+}
+@media (max-width: 900px) {
+  .topic-inner { grid-template-columns: 1fr; gap: 24px; }
+}
+.topic-num {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(72px, 8vw, 132px);
+  line-height: 0.85;
+  color: var(--pink);
+  letter-spacing: -0.04em;
+}
+.topic-num small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-mid);
+  margin-top: 16px;
+  font-weight: 500;
+}
+.topic-body { max-width: 760px; }
+.topic-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 22px;
+}
+.topic.alt .topic-tag { background: var(--white); }
+.topic h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 4.4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0 0 28px;
+  color: var(--navy);
+}
+.topic h2 em { font-style: italic; color: var(--pink); font-weight: 300; }
+.lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+.lead strong { color: var(--text-dark); font-weight: 600; }
+
+.flag-pathway {
+  background: rgba(230, 15, 101, 0.12);
+  border-bottom: 1.5px solid var(--pink);
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.action .flag-pathway { color: var(--text-dark); }
+
+/* FAQ card */
+.faq {
+  margin: 36px 0 32px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--pink);
+  border-radius: 4px;
+  padding: 26px 30px;
+}
+.topic.alt .faq { background: var(--white); }
+.faq-title {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 16px;
+}
+.faq ul { list-style: none; padding: 0; margin: 0; }
+.faq li {
+  position: relative;
+  padding: 0 0 12px 24px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+.faq li:last-child { padding-bottom: 0; }
+.faq li::before {
+  content: ''; position: absolute;
+  left: 0; top: 11px;
+  width: 8px; height: 1px;
+  background: var(--pink);
+}
+
+/* Reader action strip */
+.action {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: var(--pink-soft);
+  border-left: 3px solid var(--pink);
+  padding: 18px 22px;
+  border-radius: 0 4px 4px 0;
+  margin: 28px 0;
+}
+.action-label {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  padding-top: 3px;
+}
+.action-text { font-size: 15.5px; line-height: 1.55; color: var(--text-dark); }
+.action-text a { color: var(--pink); border-bottom: 1px solid var(--pink); }
+
+/* Resource chips */
+.resources {
+  margin-top: 28px;
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  padding: 9px 16px 9px 14px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all .18s ease;
+}
+.chip:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}
+.chip svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.6; }
+.chip:hover svg { opacity: 1; }
+.chip-pink {
+  background: var(--pink);
+  color: var(--white);
+  border-color: var(--pink);
+}
+.chip-pink:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+/* =============== PORTAL SCREENSHOT VISUAL =============== */
+.portal-visual {
+  margin: 40px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(2,4,52,0.18), 0 0 0 1px var(--border);
+  position: relative;
+}
+.portal-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.portal-visual-caption {
+  background: var(--navy);
+  color: rgba(255,255,255,0.78);
+  padding: 16px 22px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.portal-visual-caption::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--pink);
+  flex-shrink: 0;
+}
+
+/* =============== ARC-BRANDED CALENDAR SVG =============== */
+.calendar-visual {
+  margin: 40px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(2,4,52,0.18), 0 0 0 1px var(--border);
+}
+.calendar-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.calendar-visual-caption {
+  background: var(--navy);
+  color: rgba(255,255,255,0.78);
+  padding: 16px 22px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calendar-visual-caption::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--pink);
+  flex-shrink: 0;
+}
+
+/* =============== TEAM CREDIT BLOCK =============== */
+.team-credit {
+  margin: 36px 0 0;
+  padding: 28px 30px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.team-credit::before {
+  content: '';
+  position: absolute;
+  width: 280px; height: 280px;
+  top: -120px; right: -80px;
+  background: radial-gradient(circle, rgba(230,15,101,0.35) 0%, transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+.team-credit-inner { position: relative; z-index: 1; }
+.team-credit-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 14px;
+}
+.team-credit-heading {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--white);
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+.team-credit-list {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.86);
+  margin: 0;
+}
+.team-credit-list strong { color: var(--white); font-weight: 600; }
+
+/* =============== PRODUCT HIGHLIGHT =============== */
+.product-highlight {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+  color: var(--white);
+  padding: clamp(56px, 8vh, 88px) var(--gutter);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.product-highlight::before {
+  content: '';
+  position: absolute;
+  width: 420px; height: 420px;
+  top: -140px; right: -120px;
+  background: radial-gradient(circle, rgba(230,15,101,0.45) 0%, transparent 65%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+.ph-inner {
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+  z-index: 1;
+}
+.ph-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 16px;
+}
+.ph-eyebrow::before {
+  content: ''; width: 20px; height: 1px; background: var(--pink);
+}
+.ph-heading {
+  font-family: var(--display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 16px;
+  color: var(--white);
+}
+.ph-heading em {
+  color: var(--pink);
+  font-weight: 300;
+}
+.ph-lead {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+  max-width: 760px;
+  margin: 0 0 28px;
+}
+.ph-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 22px;
+}
+.ph-stat {
+  background: var(--navy);
+  padding: 22px 22px;
+}
+.ph-num {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.6vw, 28px);
+  letter-spacing: -0.015em;
+  color: var(--pink);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.ph-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+.ph-note {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.78);
+  max-width: 760px;
+  margin: 0;
+  font-style: italic;
+}
+.ph-note strong { color: var(--white); font-style: normal; font-weight: 600; }
+
+/* =============== LOOKING AHEAD / COMPOSER TEASER =============== */
+.composer-teaser {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 48px 44px;
+  margin: clamp(56px,8vh,88px) auto;
+  max-width: var(--max);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.composer-teaser::before {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  top: -180px; right: -120px;
+  background: radial-gradient(circle, rgba(230,15,101,0.38) 0%, transparent 65%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.composer-teaser::after {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  bottom: -120px; left: -80px;
+  background: radial-gradient(circle, rgba(22,26,92,0.9) 0%, transparent 65%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+.composer-teaser-inner {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .composer-teaser-inner { grid-template-columns: 1fr; gap: 28px; }
+  .composer-teaser { padding: 36px 28px; }
+}
+.ct-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 18px;
+}
+.ct-eyebrow::before {
+  content: ''; width: 20px; height: 1px; background: var(--pink);
+}
+.ct-heading {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  color: var(--white);
+  margin: 0 0 16px;
+}
+.ct-heading em { font-style: italic; color: var(--pink); font-weight: 300; }
+.ct-body {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.78);
+  max-width: 560px;
+}
+.ct-body strong { color: var(--white); font-weight: 600; }
+.ct-badge {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 28px 32px;
+  text-align: center;
+  min-width: 160px;
+}
+.ct-badge-date {
+  font-family: var(--display);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--pink);
+  letter-spacing: -0.02em;
+}
+.ct-badge-month {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.ct-badge-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+/* animated arrow */
+.ct-arrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 20px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--pink);
+}
+.ct-arrow svg { animation: arrow-bounce 1.8s ease-in-out infinite; }
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+/* =============== ENGAGE =============== */
+.engage {
+  background: var(--navy);
+  color: var(--white);
+  padding: clamp(80px, 12vh, 140px) var(--gutter);
+  position: relative;
+  overflow: hidden;
+}
+.engage::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  bottom: -200px; left: -150px;
+  background: radial-gradient(circle, rgba(230,15,101,0.35) 0%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+.engage-inner { position: relative; max-width: var(--max); margin: 0 auto; z-index: 1; }
+.engage-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 24px;
+}
+.engage-eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--pink);
+}
+.engage h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 48px;
+  max-width: 880px;
+}
+.engage h2 em { font-style: italic; color: var(--pink); font-weight: 300; }
+.engage-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.engage-item {
+  background: var(--navy);
+  padding: 32px 28px;
+  display: flex; flex-direction: column;
+  transition: background .2s;
+}
+.engage-item:hover { background: var(--navy-2); }
+.engage-item .num {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.22em;
+  color: var(--pink); font-weight: 600;
+  margin-bottom: 18px;
+}
+.engage-item .role {
+  font-family: var(--display);
+  font-size: 22px; font-weight: 400; line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.engage-item .what {
+  font-size: 15px; line-height: 1.55;
+  color: rgba(255,255,255,0.72);
+}
+.engage-item .what a {
+  color: var(--pink);
+  border-bottom: 1px solid rgba(230,15,101,0.4);
+  transition: border-color .18s;
+}
+.engage-item .what a:hover { border-bottom-color: var(--pink); }
+
+/* =============== FOOTER =============== */
+footer {
+  background: #000220;
+  color: rgba(255,255,255,0.62);
+  padding: 56px var(--gutter) 48px;
+}
+.foot-inner {
+  max-width: var(--max); margin: 0 auto;
+}
+.foot-resources {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 36px;
+}
+@media (max-width: 720px) {
+  .foot-resources { grid-template-columns: 1fr; gap: 18px; }
+}
+.foot-resources-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 600;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.foot-resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.foot-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.86);
+  padding: 9px 16px 9px 14px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-family: var(--body);
+  transition: all .18s ease;
+}
+.foot-chip:hover {
+  background: var(--pink);
+  color: var(--white);
+  border-color: var(--pink);
+  transform: translateY(-1px);
+}
+.foot-chip svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.55; }
+.foot-chip:hover svg { opacity: 1; }
+
+/* Intake CTA row */
+.foot-intake {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 30px;
+  background: rgba(230,15,101,0.1);
+  border: 1px solid rgba(230,15,101,0.28);
+  border-radius: 8px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.foot-intake-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+  min-width: 200px;
+}
+.foot-intake-text strong { color: var(--white); }
+.foot-intake-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 14px; font-weight: 600;
+  font-family: var(--body);
+  white-space: nowrap;
+  transition: all .18s ease;
+  cursor: pointer;
+}
+.foot-intake-btn:hover {
+  background: var(--white);
+  color: var(--pink);
+  transform: translateY(-1px);
+}
+.foot-intake-btn svg { width: 13px; height: 13px; }
+
+.foot-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: end;
+}
+@media (max-width: 720px) {
+  .foot-bottom { grid-template-columns: 1fr; }
+}
+.foot-credits {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.78);
+  max-width: 640px;
+}
+.foot-credits .pinkdot { color: var(--pink); }
+.foot-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-align: right;
+}
+@media (max-width: 720px) {
+  .foot-meta { text-align: left; }
+}
+
+/* =============== REVEAL ANIMATIONS =============== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s cubic-bezier(.2,.65,.2,1), transform .9s cubic-bezier(.2,.65,.2,1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.d1 { transition-delay: .08s; }
+.reveal.d2 { transition-delay: .18s; }
+.reveal.d3 { transition-delay: .28s; }
+.reveal.d4 { transition-delay: .38s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .eyebrow .pulse { animation: none; }
+  .ct-arrow svg { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="wordmark">BEGHOU<span class="dot">.</span></div>
+    <div class="topbar-meta">Issue 01 / Arc Portal Special</div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow reveal"><span class="pulse"></span> Product &amp; Technology Innovation</div>
+    <h1 class="reveal d1">Inside <em>Arc Portal</em></h1>
+    <p class="hero-sub reveal d2">The central operational hub for Arc &mdash; now in production with Nuvalent.</p>
+    <div class="hero-quote reveal d3">
+      <p>The Beghou Arc Portal is a single, unified entry point for clients, partners, and internal teams. <strong>One login, one modern interface</strong> &mdash; covering every Arc module and the legacy tools alongside them.</p>
+      <p>This issue covers what shipped, what&rsquo;s coming next, the team that built it, and the first production deployment &mdash; <strong>Nuvalent</strong>, now live.</p>
+    </div>
+
+    <!-- CHANGE 1: Hero portal teaser visual (Arc Portal Dashboard overview) -->
+    <div class="hero-portal-teaser reveal d3">
+      <div class="hero-portal-teaser-label"><span class="dot"></span> Arc Portal — Live in Production</div>
+      <img
+        src="1780084069583_image.png"
+        alt="Arc Portal dashboard overview showing incentive compensation, goal refinement, alignment maintenance, target refinement, MBO tracking, call planning, and roster management modules"
+      >
+    </div>
+
+    <div class="scroll-cue reveal d4"><span class="line"></span> Scroll to explore</div>
+  </div>
+</section>
+
+<!-- ============ CONTENTS ============ -->
+<section class="contents">
+  <div class="contents-inner">
+    <div class="contents-label">In this issue</div>
+    <nav class="contents-links">
+      <a href="#s1"><span class="num">01</span> The Portal</a>
+      <a href="#s2"><span class="num">02</span> Available Now</a>
+      <a href="#s3"><span class="num">03</span> What&rsquo;s Next</a>
+      <a href="#s4"><span class="num">04</span> Built &amp; Proven</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ PRODUCT HIGHLIGHT: ARC STUDIO MOMENTUM ============ -->
+<section class="product-highlight">
+  <div class="ph-inner">
+    <div class="ph-eyebrow reveal">Product Highlight &mdash; Arc Studio</div>
+    <h2 class="ph-heading reveal d1">Arc Studio is <em>on a tear.</em></h2>
+    <p class="ph-lead reveal d2">Monthly users are up 11% year-over-year &mdash; from 3,040 a month in 2025 to 3,378 so far in 2026 &mdash; and the client-by-client stories are even better.</p>
+
+    <div class="ph-stats reveal d2">
+      <div class="ph-stat">
+        <div class="ph-num">3,040 &rarr; 3,378</div>
+        <div class="ph-label">Monthly users<br>+11% YoY</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-num">25 &rarr; ~580</div>
+        <div class="ph-label">Neurocrine<br>users at peak</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-num">~120 / mo</div>
+        <div class="ph-label">Braeburn<br>mid-year ramp</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-num">350&ndash;420 / mo</div>
+        <div class="ph-label">Galderma<br>steady every month</div>
+      </div>
+    </div>
+
+    <p class="ph-note reveal d3"><strong>Cycle</strong> climbed from 102 to 144 monthly users over the same window. Momentum&rsquo;s real, and it&rsquo;s accelerating.</p>
+  </div>
+</section>
+
+<!-- ============ 01 THE PORTAL ============ -->
+<section class="topic" id="s1">
+  <div class="topic-inner">
+    <div class="topic-num reveal">01<small>The Portal</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">The Front Door</span>
+      <h2 class="reveal d1">Arc Portal: <em>the central operational hub for Arc</em></h2>
+      <p class="lead reveal d2">The Beghou Arc Portal is a single, unified entry point for clients, partners, and internal teams. One login, one modern interface &mdash; covering every Arc module and the legacy tools alongside them, including <strong>Commercial Targeting, Goal Setting, Roster, Tableau, CRM, Databricks, AQM, Affiliations, BI tools, and the User Guides</strong>. <strong>Nuvalent</strong> is the first production client (live now), with <strong>Scholar Rock</strong> in active migration and <strong>StealthBio, Servier, and Celcuity</strong> queued behind them. Available today, the Portal has moved from a demo-stage product to a single operational hub. Release 2 makes it the primary front door for Arc.</p>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">Bring new Arc conversations through the <span class="flag-pathway">Portal pathway</span>. If you have a client whose access pattern fits what&rsquo;s available today &mdash; or a calendar or Arc DE need that aligns with Release 2 &mdash; flag it to Siva and Patrick so it lands on the right scoping list.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FProductSolutions%2FShared%20Documents%2FModule%20Repository%2FArc%20Portal%2FEngineering">Arc Portal engineering docs <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://workbench-demo.azurewebsites.net/demo-client/dashboard">Arc Demo <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/POR">Portal idea board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/core/projects/RC">Portal release board <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 AVAILABLE NOW ============ -->
+<section class="topic alt" id="s2">
+  <div class="topic-inner">
+    <div class="topic-num reveal">02<small>Available Now</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">Available Today</span>
+      <!-- CHANGE 3: "fifteen" corrected to "twelve" -->
+      <h2 class="reveal d1">What&rsquo;s available today: <em>twelve capability areas</em></h2>
+      <p class="lead reveal d2">Arc Portal delivers twelve capability areas today, ready for any client to turn on. Single sign-on through Beghou&rsquo;s enterprise identity provider. Multi-tenant isolation, keeping each client&rsquo;s users, branding, and dashboard separate. Three platform roles plus per-app product roles, enforced server-side on every endpoint. And the piece that makes the rollout possible at all &mdash; a Downstream Sync Service that pushes every access change to legacy provisioning systems with reliable delivery, automatic retries, and a full audit trail. Nuvalent runs the production deployment now, with teams adopting each capability as their workflows call for it.</p>
+
+      <div class="faq reveal d3">
+        <div class="faq-title">Capabilities available today</div>
+        <ul>
+          <li><strong>Sign-on &amp; identity.</strong> SSO through Beghou&rsquo;s enterprise IdP, rate-limited login, one-time-code step-up for sensitive actions, one-click into every assigned app.</li>
+          <li><strong>Multi-tenancy.</strong> Each client fully isolated &mdash; its own users, apps, branding, and dashboard. Beghou admins see across; client admins see only their own tenant.</li>
+          <li><strong>User management.</strong> Single-add, bulk CSV upload with column mapping, soft-delete only, profile-picture upload with in-browser cropping.</li>
+          <li><strong>Roles &amp; permissions.</strong> Global Admin / ClientAdmin / RegularUser, plus per-app product roles. Server-enforced on every endpoint &mdash; the UI cannot be bypassed.</li>
+          <li><strong>App &amp; deployment catalogue.</strong> Beghou-delivered apps registered once with role taxonomies; per-client deployments carry their own URL, version, support contact, and icon.</li>
+          <li><strong>Access assignment.</strong> Grant, revoke, and bulk-manage per-user / per-app role bindings.</li>
+          <li><strong>Per-client branding.</strong> Logo upload (desktop + mobile) and a primary-colour picker that re-themes the UI in real time.</li>
+          <li><strong>Dashboard.</strong> Per-client, tile-based, responsive (1/2/3 columns), drag-positioned, with custom-HTML tiles gated on role and deployment access.</li>
+          <li><strong>Templates Library + Code Playground.</strong> Per-client HTML widget management with an in-browser editor and live preview iframe.</li>
+          <li><strong>Downstream Sync Service.</strong> Every access change pushed to legacy provisioning systems with reliable delivery, automatic retries, per-event status tracking, and a full per-attempt audit trail.</li>
+          <li><strong>Sync Audit Log UI.</strong> Filterable grid of every sync attempt, with operation badges, expandable detail rows, and full request / response visibility.</li>
+          <li><strong>Observability + security hardening.</strong> Server-side auth on every endpoint, sanitised uploads, security headers, CORS allow-list, health-check endpoints, structured logging with correlation IDs.</li>
+        </ul>
+      </div>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">Pitch a client whose access-management pain fits what&rsquo;s available today. For demos, use the <a target="_blank" rel="noopener" href="https://workbench-demo.azurewebsites.net/demo-client/dashboard">Arc Demo</a> and point at the Nuvalent deployment as the proof.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:f:/r/sites/ProductSolutions/Shared%20Documents/Module%20Repository/Arc%20Portal/Engineering?csf=1&web=1&e=ewlwsH">Engineering <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://workbench-demo.azurewebsites.net/demo-client/dashboard">Arc Demo <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 WHAT'S NEXT (RELEASE 2) ============ -->
+<section class="topic" id="s3">
+  <div class="topic-inner">
+    <div class="topic-num reveal">03<small>What&rsquo;s Next</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">In Build &mdash; Release 2</span>
+      <h2 class="reveal d1">From sign-in to running: <em>Calendar + Arc DE permissioning</em></h2>
+      <p class="lead reveal d2">Release 2 &mdash; in BRD now, owned by Siva Kristipati &mdash; adds two capabilities that move the Portal from <em>&ldquo;the place clients sign in&rdquo;</em> to <em>&ldquo;the place clients run from.&rdquo;</em> Together they consolidate internal product access under one Portal-driven model and remove the need for anyone &mdash; internal or client &mdash; to drop into back-end systems to grant, revoke, or schedule.</p>
+
+      <div class="faq reveal d3">
+        <div class="faq-title">Up next on the Portal</div>
+        <ul>
+          <li><strong>Calendar Module.</strong> Native client-facing event scheduling on the Portal. Client admins upload events; all client users see them in real time, with tenant isolation, audit logging, and admin-only write access. Requested by the Nuvalent team; committed for end of Q3; #1 priority and the immediate next feature in build.</li>
+          <li><strong>Arc DE permissioning from the Portal.</strong> Databricks-based Arc DE RBAC managed entirely through Portal admin controls, propagated via a Function App intermediary, with auto-revoke on user deactivation and separation-of-duties enforced (users cannot modify their own permissions). Consolidates internal product access under one Portal-driven model.</li>
+        </ul>
+      </div>
+
+      <!-- CHANGE 6: Arc-branded calendar SVG widget -->
+      <div class="calendar-visual reveal d3">
+        <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+          <defs>
+            <linearGradient id="calHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#020434"/>
+              <stop offset="100%" style="stop-color:#161A5C"/>
+            </linearGradient>
+            <linearGradient id="eventGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#E60F65"/>
+              <stop offset="100%" style="stop-color:#B00B4F"/>
+            </linearGradient>
+            <linearGradient id="eventGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#161A5C"/>
+              <stop offset="100%" style="stop-color:#0A0D45"/>
+            </linearGradient>
+            <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="120%">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#020434" flood-opacity="0.18"/>
+            </filter>
+          </defs>
+
+          <!-- Card background -->
+          <rect width="760" height="420" fill="#F4F6FB" rx="0"/>
+
+          <!-- Header bar -->
+          <rect width="760" height="72" fill="url(#calHeaderGrad)" rx="0"/>
+
+          <!-- Beghou ARC wordmark in header -->
+          <text x="28" y="30" fill="white" font-size="11" font-weight="700" letter-spacing="3" opacity="0.55">BEGHOU · ARC</text>
+
+          <!-- Calendar icon in header -->
+          <g transform="translate(28, 40)">
+            <rect width="16" height="16" rx="2" fill="none" stroke="#E60F65" stroke-width="1.5"/>
+            <line x1="5" y1="0" x2="5" y2="3" stroke="#E60F65" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="11" y1="0" x2="11" y2="3" stroke="#E60F65" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="1" y1="6" x2="15" y2="6" stroke="#E60F65" stroke-width="1"/>
+            <rect x="3" y="9" width="3" height="3" rx="0.5" fill="#E60F65" opacity="0.7"/>
+            <rect x="7" y="9" width="3" height="3" rx="0.5" fill="#E60F65" opacity="0.7"/>
+          </g>
+
+          <!-- Month + year in header -->
+          <text x="54" y="53" fill="white" font-size="18" font-weight="400" letter-spacing="-0.3" font-family="Georgia,serif" font-style="italic">Calendar</text>
+          <text x="160" y="53" fill="rgba(255,255,255,0.45)" font-size="13" font-weight="400" letter-spacing="-0.2" font-family="Georgia,serif" font-style="italic">Module</text>
+
+          <!-- Month navigation right side -->
+          <text x="560" y="30" fill="rgba(255,255,255,0.5)" font-size="9.5" letter-spacing="2" font-weight="600">Q3 2025</text>
+          <text x="560" y="52" fill="white" font-size="17" font-weight="600" letter-spacing="-0.5">June 2025</text>
+          <!-- Prev/Next arrows -->
+          <g transform="translate(710, 42)" opacity="0.7">
+            <circle cx="0" cy="0" r="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+            <polyline points="-4,4 0,0 -4,-4" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g transform="translate(738, 42)" opacity="0.9">
+            <circle cx="0" cy="0" r="12" fill="rgba(230,15,101,0.2)" stroke="rgba(230,15,101,0.4)" stroke-width="1"/>
+            <polyline points="-3,4 1,0 -3,-4" fill="none" stroke="#E60F65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <!-- Day headers row -->
+          <rect x="0" y="72" width="760" height="36" fill="white"/>
+          <line x1="0" y1="108" x2="760" y2="108" stroke="#D8DCE8" stroke-width="1"/>
+          <!-- Day labels -->
+          <text x="44"  y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">SUN</text>
+          <text x="152" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">MON</text>
+          <text x="260" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">TUE</text>
+          <text x="368" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">WED</text>
+          <text x="476" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">THU</text>
+          <text x="584" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">FRI</text>
+          <text x="692" y="93" fill="#8B91AA" font-size="10" font-weight="600" letter-spacing="1.5" text-anchor="middle">SAT</text>
+
+          <!-- Vertical day dividers -->
+          <line x1="108" y1="72" x2="108" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="216" y1="72" x2="216" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="324" y1="72" x2="324" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="432" y1="72" x2="432" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="540" y1="72" x2="540" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="648" y1="72" x2="648" y2="420" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+
+          <!-- Horizontal week dividers -->
+          <line x1="0" y1="108" x2="760" y2="108" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="0" y1="184" x2="760" y2="184" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="0" y1="260" x2="760" y2="260" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+          <line x1="0" y1="336" x2="760" y2="336" stroke="#D8DCE8" stroke-width="0.75" opacity="0.6"/>
+
+          <!-- Date numbers — Row 1 (1–7) -->
+          <!-- 1 = Sun -->
+          <text x="20" y="130" fill="#1A1D3A" font-size="13" font-weight="500">1</text>
+          <!-- 2 = Mon -->
+          <text x="128" y="130" fill="#1A1D3A" font-size="13" font-weight="500">2</text>
+          <!-- 3 = Tue -->
+          <text x="236" y="130" fill="#1A1D3A" font-size="13" font-weight="500">3</text>
+          <!-- 4 = Wed -->
+          <text x="344" y="130" fill="#1A1D3A" font-size="13" font-weight="500">4</text>
+          <!-- 5 = Thu -->
+          <text x="452" y="130" fill="#1A1D3A" font-size="13" font-weight="500">5</text>
+          <!-- 6 = Fri -->
+          <text x="560" y="130" fill="#1A1D3A" font-size="13" font-weight="500">6</text>
+          <!-- 7 = Sat -->
+          <text x="668" y="130" fill="#1A1D3A" font-size="13" font-weight="500">7</text>
+
+          <!-- Row 2 (8–14) -->
+          <text x="20"  y="206" fill="#1A1D3A" font-size="13" font-weight="500">8</text>
+          <text x="128" y="206" fill="#1A1D3A" font-size="13" font-weight="500">9</text>
+          <text x="236" y="206" fill="#1A1D3A" font-size="13" font-weight="500">10</text>
+          <text x="344" y="206" fill="#1A1D3A" font-size="13" font-weight="500">11</text>
+          <text x="452" y="206" fill="#1A1D3A" font-size="13" font-weight="500">12</text>
+          <text x="560" y="206" fill="#1A1D3A" font-size="13" font-weight="500">13</text>
+          <text x="668" y="206" fill="#1A1D3A" font-size="13" font-weight="500">14</text>
+
+          <!-- Row 3 (15–21) — today = 18 (Wed) highlighted -->
+          <text x="20"  y="282" fill="#1A1D3A" font-size="13" font-weight="500">15</text>
+          <text x="128" y="282" fill="#1A1D3A" font-size="13" font-weight="500">16</text>
+          <text x="236" y="282" fill="#1A1D3A" font-size="13" font-weight="500">17</text>
+          <!-- TODAY badge -->
+          <circle cx="368" cy="272" r="14" fill="#E60F65"/>
+          <text x="368" y="277" fill="white" font-size="13" font-weight="700" text-anchor="middle">18</text>
+          <text x="452" y="282" fill="#1A1D3A" font-size="13" font-weight="500">19</text>
+          <text x="560" y="282" fill="#1A1D3A" font-size="13" font-weight="500">20</text>
+          <text x="668" y="282" fill="#1A1D3A" font-size="13" font-weight="500">21</text>
+
+          <!-- Row 4 (22–28) -->
+          <text x="20"  y="358" fill="#1A1D3A" font-size="13" font-weight="500">22</text>
+          <text x="128" y="358" fill="#1A1D3A" font-size="13" font-weight="500">23</text>
+          <text x="236" y="358" fill="#1A1D3A" font-size="13" font-weight="500">24</text>
+          <text x="344" y="358" fill="#1A1D3A" font-size="13" font-weight="500">25</text>
+          <text x="452" y="358" fill="#1A1D3A" font-size="13" font-weight="500">26</text>
+          <text x="560" y="358" fill="#1A1D3A" font-size="13" font-weight="500">27</text>
+          <text x="668" y="358" fill="#1A1D3A" font-size="13" font-weight="500">28</text>
+
+          <!-- Row 5 (29–30) -->
+          <text x="20"  y="408" fill="#1A1D3A" font-size="13" font-weight="500">29</text>
+          <text x="128" y="408" fill="#8B91AA" font-size="13" font-weight="400">30</text>
+
+          <!-- ===== EVENTS ===== -->
+
+          <!-- Event: Q2 Review (Mon–Wed, row 1: spans cols 2–4) -->
+          <rect x="111" y="138" width="209" height="24" rx="4" fill="url(#eventGrad2)" filter="url(#cardShadow)"/>
+          <text x="119" y="153" fill="white" font-size="10" font-weight="600" letter-spacing="0.3">Q2 Business Review</text>
+          <circle cx="310" cy="150" r="3" fill="#E60F65" opacity="0.9"/>
+
+          <!-- Event: Summit (Thu single, row 1) -->
+          <rect x="435" y="138" width="100" height="24" rx="4" fill="url(#eventGrad1)"/>
+          <text x="443" y="153" fill="white" font-size="10" font-weight="600">Client Summit</text>
+
+          <!-- Event: IC Cycle Kick (Mon–Tue, row 2) -->
+          <rect x="111" y="214" width="101" height="24" rx="4" fill="url(#eventGrad1)"/>
+          <text x="119" y="229" fill="white" font-size="10" font-weight="600">IC Kick-off</text>
+
+          <!-- Event: Portal Training (Wed single, row 2) -->
+          <rect x="327" y="214" width="100" height="24" rx="4" fill="rgba(22,26,92,0.85)"/>
+          <text x="335" y="229" fill="white" font-size="10" font-weight="600">Portal Training</text>
+
+          <!-- Event: Team Standup recurring dots (Fri col, rows 1–4) -->
+          <circle cx="604" cy="150" r="3.5" fill="#E60F65" opacity="0.7"/>
+          <text x="614" y="154" fill="#4A4F6B" font-size="9.5" font-weight="500">Stand-up</text>
+          <circle cx="604" cy="226" r="3.5" fill="#E60F65" opacity="0.7"/>
+          <text x="614" y="230" fill="#4A4F6B" font-size="9.5" font-weight="500">Stand-up</text>
+          <circle cx="604" cy="302" r="3.5" fill="#E60F65" opacity="0.7"/>
+          <text x="614" y="306" fill="#4A4F6B" font-size="9.5" font-weight="500">Stand-up</text>
+          <circle cx="604" cy="370" r="3.5" fill="#E60F65" opacity="0.7"/>
+          <text x="614" y="374" fill="#4A4F6B" font-size="9.5" font-weight="500">Stand-up</text>
+
+          <!-- Event: Target Refinement (Tue–Thu, row 3) -->
+          <rect x="219" y="290" width="317" height="24" rx="4" fill="rgba(22,26,92,0.85)"/>
+          <text x="227" y="305" fill="white" font-size="10" font-weight="600">Target Refinement Window</text>
+
+          <!-- Event: Newsletter send (Sat, row 4) -->
+          <rect x="651" y="366" width="105" height="24" rx="4" fill="rgba(230,15,101,0.18)" stroke="#E60F65" stroke-width="1"/>
+          <text x="659" y="381" fill="#E60F65" font-size="9.5" font-weight="700">Newsletter 📬</text>
+
+          <!-- Legend bottom-right -->
+          <rect x="440" y="394" width="10" height="10" rx="2" fill="url(#eventGrad1)"/>
+          <text x="455" y="403" fill="#4A4F6B" font-size="9.5">Client Event</text>
+          <rect x="530" y="394" width="10" height="10" rx="2" fill="url(#eventGrad2)"/>
+          <text x="545" y="403" fill="#4A4F6B" font-size="9.5">Internal</text>
+          <circle cx="608" cy="399" r="4" fill="#E60F65" opacity="0.7"/>
+          <text x="617" y="403" fill="#4A4F6B" font-size="9.5">Recurring</text>
+
+          <!-- Status bar bottom -->
+          <rect x="0" y="108" width="3" height="312" fill="#E60F65" opacity="0.6"/>
+        </svg>
+        <div class="calendar-visual-caption">Calendar Module — Coming in Release 2 · Q3 2025 target</div>
+      </div>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">If a client has a calendar requirement, or if your team is still managing Arc DE access directly in Databricks, surface it to Siva so it shapes the Release 2 cut.</span>
+      </div>
+
+      <div class="resources reveal d4">
+        <a class="chip chip-pink" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/:f:/r/sites/ProductSolutions/Shared%20Documents/Module%20Repository/Arc%20Portal?csf=1&web=1&e=Wmlox5">Arc Portal documentation <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="chip" target="_blank" rel="noopener" href="https://team-1632246899533.atlassian.net/jira/polaris/projects/POR">Portal idea board (POR) <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 BUILT & PROVEN ============ -->
+<section class="topic alt" id="s4">
+  <div class="topic-inner">
+    <div class="topic-num reveal">04<small>Built &amp; Proven</small></div>
+    <div class="topic-body">
+      <span class="topic-tag reveal">Use Case &mdash; Nuvalent</span>
+      <h2 class="reveal d1">The first production proof: <em>Nuvalent on Arc Portal</em></h2>
+      <p class="lead reveal d2">The Nuvalent go-live is the first end-to-end proof of the model. Beghou admins provisioned, branded, and stood up the client tenant without engineering rebuilding anything for that one deployment. Every access change flowed through the Downstream Sync Service into the legacy apps.</p>
+
+      <!-- CHANGE 2: IC Summary screenshot (Image 3 — line graph) -->
+      <div class="portal-visual reveal d3">
+        <img
+          src="1780084076188_image.png"
+          alt="Arc Portal Incentive Compensation Summary view showing projected units and pre-eligibility payout for Dylura, Menavida, and Extroneva with QTD attainment tracker line graph and product weekly trend table"
+        >
+        <div class="portal-visual-caption">Arc Portal — IC Summary · Projected payout &amp; QTD attainment tracker</div>
+      </div>
+
+      <div class="team-credit reveal d3">
+        <div class="team-credit-inner">
+          <div class="team-credit-eyebrow">Built by</div>
+          <h3 class="team-credit-heading">The Portal shipped because of this team.</h3>
+          <p class="team-credit-list">
+            <strong>Siva Kristipati</strong>, <strong>Dan Cardinal</strong>,
+            <strong>Phillip Heyrman</strong>, <strong>Narasimha Marripudi</strong>,
+            <strong>Bhanu Chandar Reddy</strong>, <strong>Vashni Roy</strong>,
+            <strong>Kapil Raj</strong>, <strong>Santhosh Sivala</strong>, and
+            <strong>Pranitha Kamsani</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="action reveal d3">
+        <span class="action-label">Reader<br>Action</span>
+        <span class="action-text">Reply to this issue with a Portal win, a client question, or a recommendation for what to feature next. One-line replies are welcome.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENGAGE ============ -->
+<section class="engage">
+  <div class="engage-inner">
+    <div class="engage-eyebrow reveal">Ways to engage</div>
+    <h2 class="reveal d1">Pick the line that matches your role &mdash; <em>and start there.</em></h2>
+
+    <div class="engage-list">
+      <div class="engage-item reveal d1">
+        <div class="num">01</div>
+        <div class="role">Anyone bringing a client into Arc</div>
+        <div class="what">Use Arc Portal as the front door. If access management is the pain, what&rsquo;s available today already covers it &mdash; loop Siva and Patrick in early.</div>
+      </div>
+      <div class="engage-item reveal d2">
+        <div class="num">02</div>
+        <div class="role">Engagement leads on Nuvalent-adjacent accounts</div>
+        <div class="what">Pull the Nuvalent deployment as the reference. The pattern repeats; the second client is easier than the first.</div>
+      </div>
+      <div class="engage-item reveal d3">
+        <div class="num">03</div>
+        <div class="role">Anyone with a calendar or Arc DE access need</div>
+        <div class="what">Surface the use case now so it shapes Release 2. The Calendar Module and Arc DE permissioning are both in active build.</div>
+      </div>
+      <!-- CHANGE 5: Intake form link added as dedicated engage item -->
+      <div class="engage-item reveal d4">
+        <div class="num">04</div>
+        <div class="role">Have a feature request?</div>
+        <div class="what">Tell us what you need. <a href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I?nav=ZDljZTlmYWQtYTAwMC00MDk4LTgwM2YtZjliZmI5OGZlMTYz" target="_blank" rel="noopener">Submit via the Product Intake Form</a> and it goes straight to the backlog.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHANGE 4: COMPOSER TEASER / LOOKING AHEAD ============ -->
+<div style="background: var(--lavender-2); padding: clamp(56px,8vh,88px) var(--gutter); border-bottom: 1px solid var(--border);">
+  <div class="composer-teaser reveal">
+    <div class="composer-teaser-inner">
+      <div>
+        <div class="ct-eyebrow">Looking ahead &mdash; Issue 02</div>
+        <h2 class="ct-heading">Next up: <em>Arc Composer</em></h2>
+        <p class="ct-body">Portal is live. Now meet what builds on top of it. <strong>Arc Composer</strong> is Beghou&rsquo;s next platform chapter &mdash; what it unlocks, what&rsquo;s in alpha, and why it changes how teams build on Arc. The full story lands in Issue 02, going out company-wide on June&nbsp;28.</p>
+        <div class="ct-arrow">
+          <span>Issue 02 · June 28</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="#E60F65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="ct-badge">
+        <div class="ct-badge-date">28</div>
+        <div class="ct-badge-month">June 2026</div>
+        <div class="ct-badge-label">Issue 02<br>Send Date</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+
+    <!-- CHANGE 5: Intake form CTA in footer -->
+    <div class="foot-intake">
+      <div class="foot-intake-text">
+        <strong>Have a feature idea or request?</strong> The Product Intake Form goes straight to the backlog &mdash; every submission is reviewed.
+      </div>
+      <a class="foot-intake-btn" href="https://beghouconsultinginc.sharepoint.com/:l:/s/ProductSolutions/JABlfCeqYKTgTJ7iWfHpPSr9ATDQnZklsWLGnrAL1hqhM8I?nav=ZDljZTlmYWQtYTAwMC00MDk4LTgwM2YtZjliZmI5OGZlMTYz" target="_blank" rel="noopener">
+        Submit a Request
+        <svg viewBox="0 0 13 13" fill="none"><path d="M2 11L11 2M11 2H5M11 2V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="foot-resources">
+      <div class="foot-resources-label">Standing<br>Resources</div>
+      <div class="foot-resources-list">
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc-my.sharepoint.com/personal/patrick_conroy_beghouconsulting_com/Lists/Demo%20Owners/AllItems.aspx?viewid=1f9a58a8-0279-4912-b2b7-07e1f75cc127&env=WebViewList&npsAction=createList">Demo Owners &amp; Modules <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Lists/Project%20Playbook/AllItems.aspx">Project Playbook <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="foot-chip" target="_blank" rel="noopener" href="https://beghouconsultinginc.sharepoint.com/sites/ProductSolutions/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FProductSolutions%2FShared%20Documents%2FBRD%20Repository&viewid=401c024f%2Df64f%2D4f5f%2D8013%2D6d146b017c71&newTargetListUrl=%2Fsites%2FProductSolutions%2FShared%20Documents&viewpath=%2Fsites%2FProductSolutions%2FShared%20Documents%2FForms%2FAllItems%2Easpx">BRD Repository <svg viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="foot-credits">
+        Questions or content ideas for future issues<span class="pinkdot">.</span> Patrick Conroy and the Product &amp; Technology Innovation team.
+      </div>
+      <div class="foot-meta">
+        Beghou Product Newsletter / Issue 01 / Arc Portal Special
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+  }());
+</script>
+
+</body>
+</html>
